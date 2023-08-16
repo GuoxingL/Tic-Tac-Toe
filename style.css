@@ -1,1 +1,60 @@
+*{
+box-sizing: border-box;
+}
 
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  color: gray;
+  font-size: 4vmin;
+}
+header{
+  font-size: 5vmin;
+  color: darkgray;
+  letter-spacing: 1vmin;
+}
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 10vmin);
+  grid-template-rows: repeat(3, 10vmin);
+  gap: 1vmin;
+  margin-top: -3vmin;
+}
+
+#board > div {
+  border: 0.1vmin solid gray;
+  border-radius: 50%;
+}
+#board > div.avail {
+  cursor: pointer;
+}
+
+#board > div.avail:hover {
+  border-color: grey;
+}
+
+button {
+  margin-top: 4vmin;
+  padding: 2vmin;
+  font-size: 2vmin;
+  border-radius: 4vmin;
+  border: 0.1vmin solid gray;
+  color: gray;
+}
+
+button:hover {
+  color: white;
+  background-color: gray;
+}
+
+button:hover:not(:disabled) {
+  background-color: white;
+  color: grey;
+}
